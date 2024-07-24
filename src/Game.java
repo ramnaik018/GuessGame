@@ -1,6 +1,24 @@
 public class Game {
     public static void main(String[] args){
-        System.out.println("Hi ");
+        Computer c=new Computer();
+        int computerNumber=c.guessNumCom();
+        //System.out.println("Computer has choosen number: "+computerNumber);
+
+        Player p=new Player();
+        while(true){
+            boolean flag=true;
+            for(int i=1;i<=3;i++){
+                int playerNumber=p.guessNumPla();
+                if(playerNumber==computerNumber) {
+                    System.out.println("Player" + i + "has won!!!");
+                    flag=false;
+                    break;
+                }else{
+                    System.out.println("Better luck in next game player"+i);
+                }
+            }
+            if(!flag)break;
+        }
     }
 
 }

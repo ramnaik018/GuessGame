@@ -1,8 +1,10 @@
+package GuessGame;
+
 public class Game {
     public static void main(String[] args){
         Computer c=new Computer();
         int computerNumber=c.guessNumCom();
-        //System.out.println("Computer has choosen number: "+computerNumber);
+        //System.out.println("GuessGame.Computer has choosen number: "+computerNumber);
 
         Player p=new Player();
         while(true){
@@ -10,7 +12,7 @@ public class Game {
             for(int i=1;i<=3;i++){
                 int playerNumber=p.guessNumPla();
                 if(playerNumber==computerNumber) {
-                    System.out.println("Player" + i + "has won!!!");
+                    System.out.println("GuessGame.Player" + i + "has won!!!");
                     flag=false;
                     break;
                 }else{
